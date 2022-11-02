@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: crimson;
+}
+
+#app {
+  height: 100vh;
+  width: 100%;
+}
+
+.main-wrap {
+  background-color: white;
+}
+
+.rosso {
+  color: red;
+}
+
+.verde {
+  color: green;
+}
+
+.blu {
+  color: blue;
+}
