@@ -10,13 +10,24 @@
   <title>Vue Hello</title>
 </head>
 <body>
-  <div class="d-flex justify-content-center align-items-center" id="app">
+  <div class="d-flex justify-content-center align-items-center py-3" id="app">
     <div class="main-wrap w-50 p-3 rounded-2">
+      <div class="mb-3 w-75">
+        <label for="exampleFormControlInput1" class="form-label">Scrivi il tuo nome</label>
+        <input v-model="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="nome">
+      </div>
       <div class="mb-3 w-75">
         <label for="exampleFormControlInput1" class="form-label">Scegli il colore del testo tra rosso, verde e blu</label>
         <input v-model="classColor" type="text" class="form-control" id="exampleFormControlInput1" placeholder="colore">
       </div>    
-      <p :class="classColor">{{message}}</p>
+      <p :class="classColor">{{message}} {{name}}!</p>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Sei tipo da cane o gatto?</label>
+        <button @click="callAnimal('cane')" type="button" class="btn btn-info mx-3">Voglio un cane</button>
+        <button @click="callAnimal('gatto')" type="button" class="btn btn-info mx-3">Voglio un gatto</button>
+      </div>
+      
+      <img class="animal" :src="imgPath + animal + extension" alt="animal">
     </div>
     
   </div>
