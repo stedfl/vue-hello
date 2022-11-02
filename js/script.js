@@ -1,6 +1,3 @@
-
-// 3. Al click di un bottone nascondere l’immagine e mostrare un testo
-
 const {createApp} = Vue;
 
 createApp({
@@ -11,7 +8,9 @@ createApp({
       classColor: "",
       animal: "canegatto",
       imgPath: "img/",
-      extension: ".jpg"
+      extension: ".jpg",
+      showText: '',
+      showImage: 'true'
     }
   },
   methods: {

@@ -23,11 +23,13 @@
       <p :class="classColor">{{message}} {{name}}!</p>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Sei tipo da cane o gatto?</label>
-        <button @click="callAnimal('cane')" type="button" class="btn btn-info mx-3">Voglio un cane</button>
-        <button @click="callAnimal('gatto')" type="button" class="btn btn-info mx-3">Voglio un gatto</button>
+        <button @click="callAnimal('cane'), showImage='true', showText=''" type="button" class="btn btn-info mx-3">Voglio un cane</button>
+        <button @click="callAnimal('gatto'), showImage='true', showText=''" type="button" class="btn btn-info mx-3">Voglio un gatto</button>
+        <button @click="showImage=!showImage, showText=!showText" type="button" class="btn btn-warning mx-3">Sorpresa</button>
       </div>
       
-      <img class="animal" :src="imgPath + animal + extension" alt="animal">
+      <img v-show="showImage"class="animal" :src="imgPath + animal + extension" alt="animal">
+      <h2 v-show="showText">Mi piacciono i fenicotteri!</h2>
     </div>
     
   </div>
