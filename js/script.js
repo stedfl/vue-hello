@@ -9,8 +9,9 @@ createApp({
       animal: "canegatto",
       imgPath: "img/",
       extension: ".jpg",
-      showText: '',
-      showImage: 'true'
+      showText: false,
+      showImage: true,
+      surprise: "Sorpresa!"
     }
   },
   methods: {
